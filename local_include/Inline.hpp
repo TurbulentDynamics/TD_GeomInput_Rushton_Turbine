@@ -16,7 +16,8 @@
 #include "define_datastructures.hpp"
 
 
-
+#include "Node_Dims.hpp"
+#include "Grid_Dims.hpp"
 
 
 

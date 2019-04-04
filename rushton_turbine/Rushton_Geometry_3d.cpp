@@ -15,12 +15,9 @@
 #include <iostream>
 
 
-#include <boost/property_tree/json_parser.hpp>
-
 
 #include "Rushton_Geometry_3d.hpp"
 #include "Rushton_Geometry_Config.hpp"
-
 
 
 
@@ -780,7 +777,7 @@ void Geometry::print_geometry_points_csv(const std::string &filename, const std:
 
     std::ofstream csvFile(filename, append=="append" ? std::ofstream::app : std::ofstream::out);
 
-    csvFile.precision(std::numeric_limits<float>::max_digits10);
+    csvFile.precision(10);
 
 
 
@@ -807,7 +804,7 @@ void Geometry::print_geometry_csv(const std::string &filename, const std::vector
 
     std::ofstream csvFile(filename, append=="append" ? std::ofstream::app : std::ofstream::out);
 
-    csvFile.precision(std::numeric_limits<float>::max_digits10);
+    csvFile.precision(10);
 
 
 

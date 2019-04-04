@@ -10,6 +10,7 @@
 		225D727F221429A800372954 /* Rushton_Geometry_3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225D727D221429A800372954 /* Rushton_Geometry_3d.cpp */; };
 		225D7282221445E000372954 /* create_rushton_point_cloud.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225D7281221445E000372954 /* create_rushton_point_cloud.cpp */; };
 		227431022218C0920027C908 /* Rushton_Geometry_Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 227431012218C0920027C908 /* Rushton_Geometry_Config.cpp */; };
+		227B6DE222563C5B006F3187 /* jsoncpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 227B6DE122563C5B006F3187 /* jsoncpp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,11 @@
 		226D51842216AB0E002F9B75 /* timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = timer.hpp; sourceTree = "<group>"; };
 		227431002218C0800027C908 /* Rushton_Geometry_Config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Rushton_Geometry_Config.hpp; sourceTree = "<group>"; };
 		227431012218C0920027C908 /* Rushton_Geometry_Config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rushton_Geometry_Config.cpp; sourceTree = "<group>"; };
+		227B6DE022563C5B006F3187 /* json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
+		227B6DE122563C5B006F3187 /* jsoncpp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jsoncpp.cpp; sourceTree = "<group>"; };
+		227B6DE322564180006F3187 /* Geom_Dims.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Geom_Dims.hpp; sourceTree = "<group>"; };
+		227B6DE422564255006F3187 /* Grid_Dims.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Grid_Dims.hpp; sourceTree = "<group>"; };
+		227B6DE522564262006F3187 /* Node_Dims.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Node_Dims.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,7 @@
 			children = (
 				225A2299220A2B1500FDFB60 /* README.md */,
 				226D51832216A3B2002F9B75 /* local_include */,
+				227B6DDE225637D4006F3187 /* include */,
 				223BAE1A220A127B009A7C3C /* rushton_turbine */,
 				223BAE19220A127B009A7C3C /* Products */,
 			);
@@ -75,6 +82,8 @@
 			children = (
 				225D7288221450CE00372954 /* tests */,
 				225D728A221452C800372954 /* CMakeLists.txt */,
+				227B6DE022563C5B006F3187 /* json.h */,
+				227B6DE122563C5B006F3187 /* jsoncpp.cpp */,
 				225D727E221429A800372954 /* display_rushton_geometry.m */,
 				227431012218C0920027C908 /* Rushton_Geometry_Config.cpp */,
 				225D727D221429A800372954 /* Rushton_Geometry_3d.cpp */,
@@ -96,12 +105,22 @@
 			children = (
 				225D7289221452C800372954 /* define_typealias.h */,
 				226D5176221463F6002F9B75 /* define_datastructures.hpp */,
-				225A229A220A2B7400FDFB60 /* Rushton_Geometry_3d.hpp */,
-				227431002218C0800027C908 /* Rushton_Geometry_Config.hpp */,
+				227B6DE522564262006F3187 /* Node_Dims.hpp */,
+				227B6DE422564255006F3187 /* Grid_Dims.hpp */,
+				227B6DE322564180006F3187 /* Geom_Dims.hpp */,
 				226D5175221460B2002F9B75 /* Inline.hpp */,
 				226D51842216AB0E002F9B75 /* timer.hpp */,
 			);
 			path = local_include;
+			sourceTree = "<group>";
+		};
+		227B6DDE225637D4006F3187 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				225A229A220A2B7400FDFB60 /* Rushton_Geometry_3d.hpp */,
+				227431002218C0800027C908 /* Rushton_Geometry_Config.hpp */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				225D727F221429A800372954 /* Rushton_Geometry_3d.cpp in Sources */,
+				227B6DE222563C5B006F3187 /* jsoncpp.cpp in Sources */,
 				227431022218C0920027C908 /* Rushton_Geometry_Config.cpp in Sources */,
 				225D7282221445E000372954 /* create_rushton_point_cloud.cpp in Sources */,
 			);
@@ -221,7 +241,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "/Users/nile/spack/opt/spack/darwin-mojave-x86_64/gcc-8.2.0/boost-1.68.0-ut63j5tdsl5n546bogscvgsvpoy56eno/include";
+				HEADER_SEARCH_PATHS = (
+					"/Users/nile/spack/opt/spack/darwin-mojave-x86_64/gcc-8.2.0/boost-1.68.0-ut63j5tdsl5n546bogscvgsvpoy56eno/include",
+					local_include,
+					include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +299,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "/Users/nile/spack/opt/spack/darwin-mojave-x86_64/gcc-8.2.0/boost-1.68.0-ut63j5tdsl5n546bogscvgsvpoy56eno/include";
+				HEADER_SEARCH_PATHS = (
+					"/Users/nile/spack/opt/spack/darwin-mojave-x86_64/gcc-8.2.0/boost-1.68.0-ut63j5tdsl5n546bogscvgsvpoy56eno/include",
+					local_include,
+					include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

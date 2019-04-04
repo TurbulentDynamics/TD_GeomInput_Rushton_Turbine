@@ -22,6 +22,10 @@
 
 #include "Rushton_Geometry_Config.hpp"
 
+#include "Geom_Dims.hpp"
+#include "Node_Dims.hpp"
+#include "Grid_Dims.hpp"
+
 
 
 
