@@ -6,8 +6,8 @@
 //  Copyright © 2019 Nile Ó Broin. All rights reserved.
 //
 
-#ifndef define_datastructures_hpp
-#define define_datastructures_hpp
+#ifndef Geom_Dims_hpp
+#define Geom_Dims_hpp
 
 
 #include "define_typealias.h"
@@ -15,18 +15,20 @@
 
 
 
+struct Geom_Dims {
 
-typedef struct {
-    tNi i0 = 0;
-    tNi i1 = 0;
+    tGeomShape xc = 0.0f;
+    tGeomShape yc = 0.0f;
+    tGeomShape zc = 0.0f;
+    tGeomShape mdiam = 0.0f;
 
-    tNi j0 = 0;
-    tNi j1 = 0;
+    tGeomShape impeller_increment = 0.0f;
 
-    tNi k0 = 0;
-    tNi k1 = 0;
+};
 
-} Node_Bounds;
+
+
+
 
 
 

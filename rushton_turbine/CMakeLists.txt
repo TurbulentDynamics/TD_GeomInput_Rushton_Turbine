@@ -37,23 +37,23 @@ elseif(OPENMP_FOUND)
 endif()
 
 
-find_package(Boost 1.68 COMPONENTS program_options REQUIRED)
-if(Boost_FOUND)
-    include_directories(${Boost_INCLUDE_DIRS}) 
-endif()
+#find_package(Boost 1.68 COMPONENTS program_options REQUIRED)
+#if(Boost_FOUND)
+#    include_directories(${Boost_INCLUDE_DIRS})
+#endif()
 
 
 
 
 
 include_directories("${CMAKE_SOURCE_DIR}")
+include_directories("../include")
 include_directories("../local_include")
-#include_directories("../../include")
 
 
-add_executable(td_rushton_test create_rushton_point_cloud.cpp Rushton_Geometry_3d.cpp Rushton_Geometry_Config.cpp)
+add_executable(td_rushton_test create_rushton_point_cloud.cpp Rushton_Geometry_3d.cpp Rushton_Geometry_Config.cpp jsoncpp.cpp)
 
-target_link_libraries(td_rushton_test ${MPI_LIBRARIES} ${Boost_LIBRARIES})
+target_link_libraries(td_rushton_test ${MPI_LIBRARIES})
 
 target_compile_definitions(td_rushton_test PRIVATE -DWITH_MPI=0)
 
