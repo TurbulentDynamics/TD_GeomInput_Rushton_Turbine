@@ -107,6 +107,7 @@ void GeometryConfig::loadGeometryConfigAsJSON(std::string filepath){
         std::ifstream in(filepath.c_str());
         Json::Value dim_json;
         in >> dim_json;
+        in.close();
 
 
         resolution = (tGeomShape)dim_json["resolution"].asDouble();
@@ -151,7 +152,6 @@ void GeometryConfig::loadGeometryConfigAsJSON(std::string filepath){
         impeller0.hub.top = (tGeomShape)dim_json["impeller0"]["hub"]["top"].asDouble();
 
 
-        in.close();
 
     }
     catch(std::exception& e)
