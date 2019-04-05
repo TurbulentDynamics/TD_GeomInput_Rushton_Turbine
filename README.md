@@ -16,7 +16,7 @@ octave display_rushton_geometry.m
 
 
 ## Rushton Turbine Image
-![Rushton Turbine](WebGL_frontend.png)
+![Rushton Turbine](WebGL_frontend.jpg)
 
 
 ## Rushton produced from code
