@@ -14,12 +14,13 @@ make
 octave display_rushton_geometry.m 
 ```
 
-## Rushton produced from code
-![Rushton Point Cloud](Rushton_Points.png)
 
 ## Rushton Turbine Image
 ![Rushton Turbine](WebGL_frontend.png)
 
+
+## Rushton produced from code
+![Rushton Point Cloud](Rushton_Points.jpg)
 
 
 # Graphical User Input
