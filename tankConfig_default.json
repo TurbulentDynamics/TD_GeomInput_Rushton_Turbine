@@ -6,6 +6,9 @@
     "starting_step": "0",
     "impeller_start_angle": "0",
     "impeller_startup_steps_until_normal_speed": "0",
+    "shaft": {
+        "radius": "2.72000003"
+    },
     "baffles": {
         "numBaffles": "4",
         "firstBaffleOffset": "0.785398185",
@@ -14,7 +17,7 @@
         "thickness": "1.36000001"
     },
     "numImpellers": "1",
-    "impeller0": {
+    "impellers": [{
         "numBlades": "6",
         "firstBladeOffset": "0",
         "uav": "0.100000001",
@@ -37,8 +40,5 @@
             "bottom": "71.4000015",
             "top": "64.5999985"
         }
-    },
-    "shaft": {
-        "radius": "2.72000003"
-    }
+    }]
 }
