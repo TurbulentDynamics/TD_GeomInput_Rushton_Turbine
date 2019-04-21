@@ -33,7 +33,7 @@ spack install node-js npm
 ### Install app dependencies and build
 ```
 npm install
-npm run-scripts build
+npm run-script build
 ```
 
 ### Runs the app in the development mode.
