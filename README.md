@@ -1,7 +1,7 @@
 # Turbulent Dynamics Geometry Input Rushton Turbine
 Application is part of a larger work to calculate a point cloud for a Rushton Turbine in an multi-node fluid dynamics code.  
 
-[Graphical Frontend Available Here.](https://turbulentdynamics.github.io/TD_GeomInput_Rushton_Turbine/WebGL/build/)
+[Graphical Frontend Available Here.](https://turbulentdynamics.github.io/TD_GeomInput_Rushton_Turbine_WebGL/WebGL/build/)
 
 
 ## Install
